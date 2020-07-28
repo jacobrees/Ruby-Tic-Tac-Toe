@@ -18,22 +18,31 @@ class TicTacToe
   end
 
   def play
-    loop do
+    count = 0
+    while count < 9
       puts "#{@player1} turn"
       puts 'Pick any avaliable number 1 to 9'
       board
       player1_turn = gets.chomp
-
+      count += 1
+      break if count == 9
       puts "#{@player2} turn"
       puts 'Pick any avaliable number 1 to 9'
       board
       player2_turn = gets.chomp
+      count += 1
     end
   end
 
   def start
     welcome
     play
+    game_draw
+  end
+
+  def game_draw
+    puts "Draw"
+    
   end
 end
 
