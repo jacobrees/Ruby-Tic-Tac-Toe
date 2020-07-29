@@ -1,9 +1,14 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/PerceivedComplexity
+# rubocop:disable Metrics/AbcSize
+# rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/MethodLength
+
 require_relative '../lib/game_logic'
 
-class TicTacToe
+class TicTacToe # :nodoc:
   include GameLogic
 
   def welcome
@@ -79,6 +84,11 @@ class TicTacToe
     play
   end
 end
+
+# rubocop:enable Metrics/PerceivedComplexity
+# rubocop:enable Metrics/AbcSize
+# rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/MethodLength
 
 game = TicTacToe.new
 game.start
