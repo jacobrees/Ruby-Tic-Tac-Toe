@@ -35,7 +35,7 @@ class TicTacToe
       @@player1_turns << player1_turn.to_i
       count += 1
       test_winner
-      break if count == 9
+      break if count == 9 || @@win == true
       puts "#{@player2} turn"
       puts 'Pick any avaliable number 1 to 9'
       board
@@ -43,8 +43,9 @@ class TicTacToe
       @@player2_turns << player2_turn.to_i
       count += 1
       test_winner
+      break if @@win == true
     end
-    game_draw if count == 9
+    game_draw unless @@win == true
   end
 
   def start
