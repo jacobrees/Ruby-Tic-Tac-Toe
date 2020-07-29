@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require_relative '../lib/game_logic'
+
 class TicTacToe
-  @@player1_turns = []
-  @@player2_turns = []
-  @@winning_possibilities = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]
+  include GameLogic
 
   def welcome
     puts 'Enter Player-1 name'
@@ -19,11 +19,6 @@ class TicTacToe
     puts ' 4 | 5 | 6 '
     puts '-----------'
     puts ' 7 | 8 | 9 '
-  end
-
-  def test_winner
-    @@winning_possibilities.each{|possible_win| puts "#{@player1} win"  if possible_win.difference(@@player1_turns) == [] }
-    @@winning_possibilities.each{|possible_win| puts "#{@player2} win"  if possible_win.difference(@@player2_turns) == [] }
   end
 
   def game_draw
