@@ -5,6 +5,8 @@ module GameLogic
   @@player2_turns = []
   @@winning_possibilities = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]
   @@win = false
+  @@taken_turns = @@player1_turns + @@player2_turns
+  
   def test_winner
     @@winning_possibilities.each do |possible_win|
       puts "#{@player1} win" if possible_win.difference(@@player1_turns) == []
@@ -15,4 +17,11 @@ module GameLogic
       @@win=true if possible_win.difference(@@player1_turns) == []
     end
     end
+
+  def valid_turn?
+    self.class? == Integer && self.include?(1..9)
+  end
+
+
+
 end
