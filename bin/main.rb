@@ -14,11 +14,16 @@ class TicTacToe
   end
 
   def board
-    puts ' 1 | 2 | 3 '
+    arr_board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    @@player1_turns.each { |position| arr_board[position - 1] = 'X' }
+    @@player2_turns.each { |position| arr_board[position - 1] = 'O' }
+
+    puts " #{arr_board[0]} | #{arr_board[1]} | #{arr_board[2]}"
+    puts '----------'
+    puts " #{arr_board[3]} | #{arr_board[4]} | #{arr_board[5]}"
     puts '-----------'
-    puts ' 4 | 5 | 6 '
-    puts '-----------'
-    puts ' 7 | 8 | 9 '
+    puts " #{arr_board[6]} | #{arr_board[7]} | #{arr_board[8]}"
   end
 
   def game_draw
@@ -46,9 +51,11 @@ class TicTacToe
         break if test_move(player1_turn) == true
       end
       calculate_taken_turns
+
       count += 1
       test_winner
       break if count == 9 || @@win == true
+
       puts "#{@player2} turn"
       puts 'Pick any avaliable number 1 to 9:'
       board
@@ -64,6 +71,7 @@ class TicTacToe
       break if @@win == true
     end
     game_draw unless @@win == true
+    board
   end
 
   def start
