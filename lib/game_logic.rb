@@ -16,10 +16,10 @@ module GameLogic
       puts "#{@player2} win" if possible_win.difference(@@player2_turns) == []
       @@win = true if possible_win.difference(@@player2_turns) == []
     end
-    end
+  end
 
   def test_move(player_input)
-    if (1..9).include? player_input.to_i 
+    if (1..9).include? player_input.to_i
       true
     else
       false

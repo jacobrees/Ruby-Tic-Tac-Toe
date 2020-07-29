@@ -29,24 +29,25 @@ class TicTacToe
     count = 0
     while count < 9
       puts "#{@player1} turn"
-      puts 'Pick any avaliable number 1 to 9'
+      puts 'Pick any avaliable number 1 to 9:'
       board
       loop do
         player1_turn = gets.chomp
         @@player1_turns << player1_turn.to_i
-        puts 'invalid move' if test_move(player1_turn) == false
+        puts 'Invalid move! Please pick a number between 1 & 9:' if test_move(player1_turn) == false
         break if test_move(player1_turn) == true
       end
       count += 1
       test_winner
       break if count == 9 || @@win == true
+
       puts "#{@player2} turn"
-      puts 'Pick any avaliable number 1 to 9'
+      puts 'Pick any avaliable number 1 to 9:'
       board
       loop do
         player2_turn = gets.chomp
         @@player2_turns << player2_turn.to_i
-        puts 'invalid move' if test_move(player2_turn) == false
+        puts 'Invalid move! Please pick a number between 1 & 9:' if test_move(player2_turn) == false
         break if test_move(player2_turn) == true
       end
       count += 1
