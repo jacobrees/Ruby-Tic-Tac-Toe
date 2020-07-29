@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# rubocop:disable Metrics/AbcSize
+# rubocop:disable Metrics/MethodLength
 
 require_relative '../lib/game_logic'
 
@@ -88,3 +92,6 @@ end
 
 game = TicTacToe.new
 game.start
+
+# rubocop:enable Metrics/AbcSize
+# rubocop:enable Metrics/MethodLength
