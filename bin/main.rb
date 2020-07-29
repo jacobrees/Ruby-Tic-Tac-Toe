@@ -1,10 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/PerceivedComplexity
 # rubocop:disable Metrics/AbcSize
-# rubocop:disable Metrics/CyclomaticComplexity
-# rubocop:disable Metrics/MethodLength
 
 require_relative '../lib/game_logic'
 
@@ -43,33 +40,40 @@ class TicTacToe # :nodoc:
     puts "#{@player2} Win"
   end
 
+  def player1_turn
+    puts "#{@player1} turn"
+    puts 'Pick any avaliable number 1 to 9:'
+    board
+    loop do
+      player1_turn = gets.chomp
+      @@player1_turns << player1_turn.to_i if test_move(player1_turn) == true
+      puts 'Invalid move! Please pick a number between 1 & 9:' if test_move(player1_turn) == false
+      break if test_move(player1_turn) == true
+    end
+  end
+
+  def player2_turn
+    puts "#{@player2} turn"
+    puts 'Pick any avaliable number 1 to 9:'
+    board
+    loop do
+      player2_turn = gets.chomp
+      @@player2_turns << player2_turn.to_i if test_move(player2_turn) == true
+      puts 'Invalid move! Please pick a number between 1 & 9:' if test_move(player2_turn) == false
+      break if test_move(player2_turn) == true
+    end
+  end
+
   def play
     count = 0
     while count < 9
-      puts "#{@player1} turn"
-      puts 'Pick any avaliable number 1 to 9:'
-      board
-      loop do
-        player1_turn = gets.chomp
-        @@player1_turns << player1_turn.to_i if test_move(player1_turn) == true
-        puts 'Invalid move! Please pick a number between 1 & 9:' if test_move(player1_turn) == false
-        break if test_move(player1_turn) == true
-      end
+      player1_turn
       calculate_taken_turns
-
       count += 1
       test_winner
       break if count == 9 || @@win == true
 
-      puts "#{@player2} turn"
-      puts 'Pick any avaliable number 1 to 9:'
-      board
-      loop do
-        player2_turn = gets.chomp
-        @@player2_turns << player2_turn.to_i if test_move(player2_turn) == true
-        puts 'Invalid move! Please pick a number between 1 & 9:' if test_move(player2_turn) == false
-        break if test_move(player2_turn) == true
-      end
+      player2_turn
       calculate_taken_turns
       count += 1
       test_winner
@@ -85,10 +89,7 @@ class TicTacToe # :nodoc:
   end
 end
 
-# rubocop:enable Metrics/PerceivedComplexity
 # rubocop:enable Metrics/AbcSize
-# rubocop:enable Metrics/CyclomaticComplexity
-# rubocop:enable Metrics/MethodLength
 
 game = TicTacToe.new
 game.start
