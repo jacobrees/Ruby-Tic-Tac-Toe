@@ -32,9 +32,10 @@ class TicTacToe
       puts 'Pick any avaliable number 1 to 9'
       board
       loop do
-      player1_turn = gets.chomp 
-      @@player1_turns << player1_turn.to_i
-      break if player1_turn.valid_turn?
+        player1_turn = gets.chomp
+        @@player1_turns << player1_turn.to_i
+        puts 'invalid move' if test_move(player1_turn) == false
+        break if test_move(player1_turn) == true
       end
       count += 1
       test_winner
@@ -43,9 +44,10 @@ class TicTacToe
       puts 'Pick any avaliable number 1 to 9'
       board
       loop do
-      player2_turn = gets.chomp
-      @@player2_turns << player2_turn.to_i
-      break if player2_turn.valid_turn?
+        player2_turn = gets.chomp
+        @@player2_turns << player2_turn.to_i
+        puts 'invalid move' if test_move(player2_turn) == false
+        break if test_move(player2_turn) == true
       end
       count += 1
       test_winner
