@@ -23,9 +23,9 @@ module GameLogic
   end
 
   def test_move(player_input)
-    if (1..9).none? {|accepted_interger| accepted_interger == player_input.to_i}
+    if (1..9).none? { |accepted_interger| accepted_interger == player_input.to_i }
       false
-    elsif @@taken_turns.any? {|taken_turn| taken_turn == player_input.to_i}
+    elsif @@taken_turns.any? { |taken_turn| taken_turn == player_input.to_i }
       false
     else
       true
