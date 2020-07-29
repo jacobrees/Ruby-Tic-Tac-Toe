@@ -4,6 +4,14 @@ require_relative '../lib/game_logic'
 class TicTacToe # :nodoc:
   include GameLogic
 
+  def initialize
+    @player1_turns = []
+    @player2_turns = []
+    @winning_possibilities = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]
+    @win = false
+    @taken_turns = []
+  end
+
   def welcome
     puts 'Enter Player-1 name'
     @player1 = gets.chomp
@@ -14,8 +22,8 @@ class TicTacToe # :nodoc:
   def board
     arr_board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    @@player1_turns.each { |position| arr_board[position - 1] = 'X' }
-    @@player2_turns.each { |position| arr_board[position - 1] = 'O' }
+    @player1_turns.each { |position| arr_board[position - 1] = 'X' }
+    @player2_turns.each { |position| arr_board[position - 1] = 'O' }
 
     puts " #{arr_board[0]} | #{arr_board[1]} | #{arr_board[2]}"
     puts '----------'
@@ -42,7 +50,7 @@ class TicTacToe # :nodoc:
     board
     loop do
       player1_turn = gets.chomp
-      @@player1_turns << player1_turn.to_i if test_move(player1_turn) == true
+      @player1_turns << player1_turn.to_i if test_move(player1_turn) == true
       puts 'Invalid move! Please pick a number between 1 & 9:' if test_move(player1_turn) == false
       break if test_move(player1_turn) == true
     end
@@ -54,7 +62,7 @@ class TicTacToe # :nodoc:
     board
     loop do
       player2_turn = gets.chomp
-      @@player2_turns << player2_turn.to_i if test_move(player2_turn) == true
+      @player2_turns << player2_turn.to_i if test_move(player2_turn) == true
       puts 'Invalid move! Please pick a number between 1 & 9:' if test_move(player2_turn) == false
       break if test_move(player2_turn) == true
     end
@@ -67,15 +75,15 @@ class TicTacToe # :nodoc:
       calculate_taken_turns
       count += 1
       test_winner
-      break if count == 9 || @@win == true
+      break if count == 9 || @win == true
 
       player2_turn
       calculate_taken_turns
       count += 1
       test_winner
-      break if @@win == true
+      break if @win == true
     end
-    game_draw unless @@win == true
+    game_draw unless @win == true
     board
   end
 
