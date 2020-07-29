@@ -25,6 +25,14 @@ class TicTacToe
     puts "#{@player1} & #{@player2} Draw"
   end
 
+  def player1_win
+    puts "#{@player1} Win"
+  end
+
+  def player2_win
+    puts "#{@player2} Win"
+  end
+
   def play
     count = 0
     while count < 9

@@ -9,11 +9,9 @@ module GameLogic
 
   def test_winner
     @@winning_possibilities.each do |possible_win|
-      puts "#{@player1} win" if possible_win.difference(@@player1_turns) == []
+      player1_win if possible_win.difference(@@player1_turns) == []
       @@win = true if possible_win.difference(@@player1_turns) == []
-    end
-    @@winning_possibilities.each do |possible_win|
-      puts "#{@player2} win" if possible_win.difference(@@player2_turns) == []
+      player2_win if possible_win.difference(@@player2_turns) == []
       @@win = true if possible_win.difference(@@player2_turns) == []
     end
   end
