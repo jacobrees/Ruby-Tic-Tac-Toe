@@ -37,6 +37,7 @@ class TicTacToe
         puts 'Invalid move! Please pick a number between 1 & 9:' if test_move(player1_turn) == false
         break if test_move(player1_turn) == true
       end
+      calculate_taken_turns
       count += 1
       test_winner
       break if count == 9 || @@win == true
@@ -50,6 +51,7 @@ class TicTacToe
         puts 'Invalid move! Please pick a number between 1 & 9:' if test_move(player2_turn) == false
         break if test_move(player2_turn) == true
       end
+      calculate_taken_turns
       count += 1
       test_winner
       break if @@win == true
