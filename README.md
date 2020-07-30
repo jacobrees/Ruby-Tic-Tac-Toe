@@ -27,7 +27,7 @@ For more information: [Wikipedia Tic-Tac-Toe](https://en.wikipedia.org/wiki/Tic-
 
 ## Live Code
 
-Live code link is currently unavailable as repl.it only supports Ruby version 2.5.1 (This code countains a method called difference that isn't supported in Ruby version 2.5.1, this code was built in Ruby version 2.7.0p0)
+Live code link is currently unavailable as repl.it only supports Ruby version 2.5.1 (This code contains a method called difference that isn't supported in Ruby version 2.5.1, this code was built in Ruby version 2.7.0p0)
 
 
 ## Authors
