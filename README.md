@@ -17,6 +17,7 @@ The following example game is won by the first player, X:
 For more information: [Wikipedia Tic-Tac-Toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 # Getting Started
+It is recomended that you use this project with ***Ruby version 2.7.0*** and have this version already installed on your machine before you begin.
 
 To get a local copy of the repository please run the following commands on your terminal:
 
@@ -26,6 +27,16 @@ $ cd <folder>
 
 ```
 $ git clone git@github.com:jacobrees/Ruby-Tic-Tac-Toe.git
+```
+
+To launch an instance of this game inside of your terminal first navigate into the repository in the  terminal and run the command `bin/main.rb`. Below showcases the following commands to run next:
+
+```
+$ cd Ruby-Tic-Tac-Toe
+```
+
+```
+$ bin/main.rb
 ```
 
 ## Built With
