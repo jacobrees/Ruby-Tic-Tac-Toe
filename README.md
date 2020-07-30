@@ -4,6 +4,7 @@ This project is a challenge to build a Tic Tac Toe game using Ruby, this is part
 
 ### Ruby Tic Tac Toe Screenshot:
 
+![](screenshot/screenshot.png)
 
 ## Built With
 
