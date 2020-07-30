@@ -22,7 +22,7 @@ For more information: [Wikipedia Tic-Tac-Toe](https://en.wikipedia.org/wiki/Tic-
 
 ## Built With
 
-- Ruby(2.7.0p0)
+- Ruby (Version - 2.7.0p0)
 
 
 ## Live Code
