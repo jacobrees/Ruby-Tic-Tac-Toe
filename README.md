@@ -29,7 +29,7 @@ $ cd <folder>
 $ git clone git@github.com:jacobrees/Ruby-Tic-Tac-Toe.git
 ```
 
-To launch an instance of this game inside of your terminal first navigate into the repository in the  terminal and run the command `bin/main.rb`. Below showcases the following commands to run next:
+To launch an instance of this game inside of your terminal. First you will need to navigate into the repository you have just cloned. You will do this by using `cd` inside of your terminal. once you are inside of this folder run the command `bin/main.rb` and this will start the game. Below shows the following commands to run to achieve this:
 
 ```
 $ cd Ruby-Tic-Tac-Toe
