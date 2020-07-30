@@ -1,6 +1,6 @@
 # Ruby Tic Tac Toe
 
-This project is a challenge to build a Tic Tac Toe game using Ruby, this is part of the *Microverse Remote Software Development Curriculum*.
+> This project is a challenge to build a Tic Tac Toe game using Ruby. This is part of the *Microverse Remote Software Development Curriculum*.
 
 ### Ruby Tic Tac Toe Screenshot:
 
