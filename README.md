@@ -4,7 +4,7 @@
 
 ### Ruby Tic Tac Toe Screenshot:
 
-![](screenshot/screenshot.png)
+![](screenshot/screenshot.gif)
 
 ## How To Play Tic Tac Toe
 
