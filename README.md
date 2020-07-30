@@ -14,7 +14,7 @@ The following example game is won by the first player, X:
 
 ![](screenshot/screenshot_2.png)
 
-For more information: [wikipedia-tic-tac-toe article](https://en.wikipedia.org/wiki/Tic-tac-toe)
+For more information: [Wikipedia Tic-Tac-Toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 
 ## Getting Started
