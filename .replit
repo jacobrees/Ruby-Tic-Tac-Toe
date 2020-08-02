@@ -1,0 +1,2 @@
+run = "bin/main.rb"
+language = "bash"
