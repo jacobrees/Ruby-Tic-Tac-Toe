@@ -47,7 +47,9 @@ $ bin/main.rb
 
 ## Live Code
 
-Live code link is currently unavailable as repl.it only supports Ruby version 2.5.1 (This code contains a method called difference that isn't supported in Ruby version 2.5.1, this code was built in Ruby version 2.7.0p0)
+Code has been updated for added support in Repl.it (Repl.it only supports Ruby Version - 2.5.1)
+
+[Repl.it](https://repl.it/@jacobrees24/Ruby-Tic-Tac-Toe-2#README.md)
 
 ## Authors
 
