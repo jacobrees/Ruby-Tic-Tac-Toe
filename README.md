@@ -17,7 +17,7 @@ The following example game is won by the first player, X:
 For more information: [Wikipedia Tic-Tac-Toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 # Getting Started
-It is recomended that you use this project with ***Ruby version 2.7.0*** and have this version already installed on your machine before you begin.
+It is recomended that you use this project with ***Ruby version 2.7.0*** (support has now been added for older versions of Ruby) you should already have Ruby installed on your machine before you begin.
 
 To get a local copy of the repository please run the following commands on your terminal:
 
@@ -49,7 +49,7 @@ $ bin/main.rb
 
 Code has been updated for added support in Repl.it (Repl.it only supports Ruby Version - 2.5.1)
 
-[Repl.it](https://repl.it/@jacobrees24/Ruby-Tic-Tac-Toe-2#README.md)
+[View Live Code](https://repl.it/@jacobrees24/Ruby-Tic-Tac-Toe-2#README.md)
 
 ## Authors
 
