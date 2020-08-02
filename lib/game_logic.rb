@@ -1,10 +1,10 @@
 module GameLogic # :nodoc:
   def test_winner
     @winning_possibilities.each do |possible_win|
-      player1_win if possible_win.difference(@player1_turns) == []
-      @win = true if possible_win.difference(@player1_turns) == []
-      player2_win if possible_win.difference(@player2_turns) == []
-      @win = true if possible_win.difference(@player2_turns) == []
+      player1_win if possible_win - @player1_turns == []
+      @win = true if possible_win - @player1_turns == []
+      player2_win if possible_win - @player2_turns == []
+      @win = true if possible_win - @player2_turns == []
     end
   end
 
