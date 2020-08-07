@@ -41,6 +41,16 @@ $ cd Ruby-Tic-Tac-Toe
 $ bin/main.rb
 ```
 
+#### Testing
+
+To test the code, run `rspec --format doc` from root of the folder using terminal.
+> Rspec is used for the test.
+
+To install Rspec if you do not already have Rspec installed run the bash command bellow
+~~~bash
+$ gem install rspec
+~~~
+
 ## Built With
 
 - Ruby (Version - 2.7.0p0)
@@ -62,6 +72,13 @@ Code has been updated for added support in Repl.it (Repl.it only supports Ruby V
 
 - Github: [@yigitm](https://github.com/yigitm)
 - Linkedin: [ygtmrsn](https://www.linkedin.com/in/yigitmersin)
+
+👤 **Roy Ntaate**
+
+- Github: [@RNtaate](https://github.com/RNtaate)
+- Twitter: [@RNtaate](https://twitter.com/RNtaate)
+- Linkedin: [roy-ntaate](https://linkedin.com/in/roy-ntaate)
+
 
 ## 🤝 Contributing
 
