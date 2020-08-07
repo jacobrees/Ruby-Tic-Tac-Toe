@@ -6,6 +6,7 @@ module GameLogic # :nodoc:
       player2_win if possible_win - @player2_turns == []
       @win = true if possible_win - @player2_turns == []
     end
+    @win
   end
 
   def calculate_taken_turns
